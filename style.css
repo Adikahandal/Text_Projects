@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serifd;
+    font-weight: 400;
+}
+
+body {
+    background: rgb(237, 237, 232);
+}
+
+nav .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.3rem 11.5rem;
+    background: #fff;
+}
+
+nav .wrapper .left,
+nav .wrapper .right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.9rem;
+}
+
+nav .wrapper .left {
+    padding-left: 3rem;
+    display: flex;
+    gap: 0.7rem;
+}
+
+nav .wrapper .logo i {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #0a66c2
+}
+
+nav .wrapper .left .input {
+    background: rgb(237, 245, 246);
+    width: 100%;
+    padding: 0.5rem 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+
+nav .wrapper .left .input input[type='search'] {
+    width: 15.5rem;
+    border: none;
+    background: transparent;
+}
+
+nav .wrapper .left .input input[type='search']::placeholder {
+    font-size: 0.8rem;
+    color: rgb(49, 49, 49);
+    font-weight: 400;
+
+}
+
+nav .wrapper .left .input i {
+    font-size: 0.9rem;
+    color: rgb(41, 40, 40);
+
+}
+
+nav .wrapper .right .home,
+nav .wrapper .right .network,
+nav .wrapper .right .jobs,
+nav .wrapper .right .message,
+nav .wrapper .right .notification,
+nav .wrapper .right .user,
+nav .wrapper .right .work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+
+nav .wrapper .right .home:hover,
+nav .wrapper .right .network:hover,
+nav .wrapper .right .jobs:hover,
+nav .wrapper .right .message:hover,
+nav .wrapper .right .notification:hover,
+nav .wrapper .right .user .down:hover,
+nav .wrapper .right .work .down:hover {
+    color: black;
+}
+
+nav .wrapper .right .home i,
+nav .wrapper .right .network i,
+nav .wrapper .right .jobs i,
+nav .wrapper .right .message i,
+nav .wrapper .right .notification i {
+    font-size: 1.2rem;
+}
+
+nav .wrapper .right .network,
+nav .wrapper .right .jobs,
+nav .wrapper .right .message,
+nav .wrapper .right .notification,
+nav .wrapper .right .work {
+    color: rgb(96, 96, 96);
+}
+
+
+nav .wrapper .right .user .down,
+nav .wrapper .right .work .down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: gray;
+}
+
+nav .wrapper .right .work i:first-child,
+nav .wrapper .right .user i:first-child {
+    background: gray;
+    color: #fff;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    width: 7rem;
+    text-align: center;
+    cursor: pointer;
+    color: gray;
+}
+
+.wrapper a:hover {
+    text-decoration: underline;
+}
+
+nav .wrapper .right .home {
+    border-bottom: 2px solid black;
+}
+
+/* ................ */
+
+.container {
+    display: grid;
+    grid-template-columns: 19.5% 50.5% 30%;
+    gap: 1.5rem;
+    width: 71%;
+    margin: 1.4rem auto;
+}
+
+aside .sidebar {
+    background: #fff;
+    width: 100%;
+    height: 45vh;
+    position: relative;
+    border-radius: 0.8rem;
+    overflow: hidden;
+}
+
+aside .sidebar .top {
+    width: 100%;
+    height: 7.5vh;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSYLf-X54tb3-1_-hmcD-V3f-2hdTUlQnXXwmK6upvGg&s");
+    position: absolute;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+}
+
+aside .sidebar img {
+    position: relative;
+    background: rgb(255, 251, 251);
+    border: 3px solid #fff;
+    box-shadow: 4px 1px 5px rgb(156, 155, 155);
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+aside .sidebar .profile {
+    position: relative;
+    text-align: center;
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    /* border-bottom: 1px solid rgb(202, 201, 201); */
+    /* height: 10vh; */
+}
+
+
+.sidebar .profile a {
+    text-decoration: none;
+    color: #000;
+}
+
+.sidebar .profile a:hover {
+    text-decoration: underline;
+}
+
+.sidebar .profile small {
+    font-size: 0.7rem;
+    color: gray;
+}
+
+.sidebar .view {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    top: 6%;
+    border-bottom: 1px solid rgb(145, 138, 138);
+    height: 9vh;
+
+}
+
+.sidebar .view .who_viewed {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 0.1rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.sidebar .view .who_viewed:hover {
+    background-color: rgb(220, 220, 220);
+}
+
+.sidebar .view .who_viewed h6 {
+    color: gray;
+}
+
+.sidebar .view .who_viewed a {
+    color: #004c97;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.sidebar .premium {
+    position: relative;
+    top: 7%;
+}
+
+.sidebar .premium:hover {
+    background-color: rgb(220, 220, 220);
+
+}
+
+.sidebar .premium h6 {
+    color: gray;
+    font-weight: 600;
+    margin: .2rem;
+}
+
+.sidebar .premium a {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 0.8rem;
+    color: #000;
+}
+
+.sidebar .premium a i {
+    color: rgb(244, 171, 88);
+}
+
+hr#premium,
+hr#profile {
+    margin: 0.8rem 0;
+}
+
+.sidebar .items {
+    position: relative;
+    cursor: pointer;
+    top: 7%;
+    width: 90%;
+    display: flex;
+    gap: 0.3rem;
+    margin: 0.4rem 0 0 1rem;
+    color: gray;
+}
+
+.sidebar .items:hover {
+
+    background-color: rgb(220, 220, 220);
+}
+
+aside .recent_jobs {
+    background: #fff;
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    border-radius: 0.8rem;
+    overflow: hidden;
+}
+
+aside .recent_jobs .recent {
+    margin: 1rem;
+    color: gray;
+
+}
+
+aside .recent_jobs .recent h6 {
+    font-weight: 500;
+}
+
+aside .recent_jobs .recent .one {
+    display: flex;
+    align-items: center;
+    margin-top: 0.7rem;
+    gap: 0.5rem;
+    color: rgb(83, 83, 83);
+
+}
+
+aside .recent_jobs .recent .one i {
+    font-size: 0.9rem;
+}
+
+aside .recent_jobs .groups {
+    margin: 2rem 0 0 1rem;
+
+}
+
+aside .recent_jobs .groups h5 {
+    color: #0a66c2;
+    font-size: 0.7rem;
+}
+
+aside .recent_jobs .groups .two {
+    display: flex;
+    align-items: center;
+    margin-top: 0.7rem;
+    gap: 0.5rem;
+    color: rgb(83, 83, 83);
+
+}
+
+aside .recent_jobs .groups .two h6 {
+    font-weight: 500;
+
+}
+
+.groups .show {
+    display: flex;
+    margin-top: 1rem;
+    gap: .5rem;
+    color: gray;
+}
+
+aside .events {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 1rem 0 1rem
+}
+
+aside .events h6:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+aside .events i {
+    color: gray;
+    cursor: pointer;
+}
+
+.discover {
+    text-align: center;
+    margin: 2rem 0 0;
+    border-top: 1px solid rgb(144, 144, 144);
+    padding-top: 1rem;
+}
+
+.discover a {
+    text-decoration: none;
+    color: gray;
+}
+
+/* sidebar styling ended */
+
+/* main section starts here */
+
+main {
+    position: relative;
+    border-radius: 0.8rem;
+}
+
+.main_section {
+    background: #fff;
+    border-radius: 0.8rem;
+    height: 67vh;
+    position: absolute;
+}
+
+main #close {
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    color: gray;
+}
+
+main .event {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0 0 1rem;
+}
+
+main .event i {
+    font-size: 2rem;
+    color: #0a66c2;
+}
+
+main .event h2 {
+    font-weight: 400;
+    cursor: pointer;
+}
+
+main .box {
+    width: 95%;
+    margin: 0.5rem auto;
+    border-radius: 0.5rem;
+}
+
+main .box img {
+    width: 100%;
+    cursor: pointer;
+}
+
+main .box .content {
+    padding: 0.5rem 1rem;
+}
+
+main .box .content p {
+    font-size: smaller;
+    font-weight: 500;
+}
+
+main .box .btn {
+    border: none;
+    background-color: #0c7cec;
+    padding: 0.6rem 1rem;
+    border-radius: 4rem;
+    margin: 0.5rem 1rem;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s all ease;
+}
+
+main .box .btn:hover {
+    background-color: #1b74ce;
+}
+
+main .media {
+    position: relative;
+    top: 65%;
+    border-radius: 0.8rem;
+    background-color: #fff;
+    height: 20vh;
+}
+
+main .media .search {
+    display: flex;
+    gap: 1rem;
+    padding: 1.3rem;
+}
+
+main .media .search img {
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid gray;
+    box-shadow: 4px 1px 10px rgb(156, 155, 155);
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0.9;
+}
+
+main .media .search input {
+
+    border-radius: 5rem;
+    border: 1px solid gray;
+    width: 100%;
+    padding: 0 1.2rem;
+    cursor: pointer;
+    transition: 0.3s all ease;
+
+}
+
+main .media .search input::placeholder {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+main .media .search input:hover {
+    background-color: rgb(227, 227, 227);
+}
+
+main .media .posts {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.6rem 2rem;
+}
+
+main .media .post {
+    display: flex;
+    padding: 0.4rem 1.2rem;
+    gap: 1rem;
+}
+
+main .media .post:hover {
+    background-color: rgb(227, 227, 227);
+
+}
+
+main .media .post:nth-child(1) i {
+    color: #09529a;
+}
+
+main .media .post:nth-child(2) i {
+    color: #009c31;
+}
+
+main .media .post:nth-child(3) i {
+    color: #227cd6;
+}
+
+main .media .post:nth-child(4) i {
+    color: #ff4fa1;
+}
+
+/* main section ends here */
+
+
+/* right sidebar section starts here */
+.right_side {
+    background: #fff;
+    border-radius: 0.8rem;
+    height: 53vh;
+}
+
+.right_side .news {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.right_side .news h4 {
+    font-weight: 600;
+}
+
+.right_side .latest_news {
+    margin: 0.8rem 1rem;
+}
+
+.right_side .latest_news .one {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    cursor: pointer;
+}
+
+.right_side .latest_news .one h5 {
+    font-weight: 700;
+}
+
+.right_side .latest_news .one i {
+    font-size: 0.5rem;
+    color: gray;
+}
+
+.right_side .latest_news .two {
+    margin: 0 1.9rem;
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.right_side .show_more {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    color: gray;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.right_side .show_more h5 {
+    font-weight: 500;
+}
+
+/* right sidebar section ends here */
